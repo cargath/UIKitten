@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		352071DC1CC9633F009BC420 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352071DB1CC9633F009BC420 /* AppDelegate.swift */; };
+		352071DE1CC9633F009BC420 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352071DD1CC9633F009BC420 /* ViewController.swift */; };
+		352071E31CC9633F009BC420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352071E21CC9633F009BC420 /* Assets.xcassets */; };
+		352071E61CC9633F009BC420 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352071E41CC9633F009BC420 /* LaunchScreen.storyboard */; };
 		35DD12811CB9CA7000FD96C0 /* UIKitten.h in Headers */ = {isa = PBXBuildFile; fileRef = 35DD12801CB9CA7000FD96C0 /* UIKitten.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35DD12881CB9CA7000FD96C0 /* UIKitten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DD127D1CB9CA7000FD96C0 /* UIKitten.framework */; };
 		35DD128D1CB9CA7000FD96C0 /* UIKittenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DD128C1CB9CA7000FD96C0 /* UIKittenTests.swift */; };
@@ -23,6 +27,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		352071D91CC9633F009BC420 /* UIKittenPrototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIKittenPrototype.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		352071DB1CC9633F009BC420 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		352071DD1CC9633F009BC420 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		352071E21CC9633F009BC420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		352071E51CC9633F009BC420 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		352071E71CC9633F009BC420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		35DD127D1CB9CA7000FD96C0 /* UIKitten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DD12801CB9CA7000FD96C0 /* UIKitten.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitten.h; sourceTree = "<group>"; };
 		35DD12821CB9CA7000FD96C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +42,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		352071D61CC9633F009BC420 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35DD12791CB9CA7000FD96C0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,10 +67,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		352071DA1CC9633F009BC420 /* UIKittenPrototype */ = {
+			isa = PBXGroup;
+			children = (
+				352071E21CC9633F009BC420 /* Assets.xcassets */,
+				352071E41CC9633F009BC420 /* LaunchScreen.storyboard */,
+				352071E71CC9633F009BC420 /* Info.plist */,
+				352071DB1CC9633F009BC420 /* AppDelegate.swift */,
+				352071DD1CC9633F009BC420 /* ViewController.swift */,
+			);
+			path = UIKittenPrototype;
+			sourceTree = "<group>";
+		};
 		35DD12731CB9CA7000FD96C0 = {
 			isa = PBXGroup;
 			children = (
 				35DD127F1CB9CA7000FD96C0 /* UIKitten */,
+				352071DA1CC9633F009BC420 /* UIKittenPrototype */,
 				35DD128B1CB9CA7000FD96C0 /* UIKittenTests */,
 				35DD127E1CB9CA7000FD96C0 /* Products */,
 			);
@@ -64,6 +94,7 @@
 			children = (
 				35DD127D1CB9CA7000FD96C0 /* UIKitten.framework */,
 				35DD12871CB9CA7000FD96C0 /* UIKittenTests.xctest */,
+				352071D91CC9633F009BC420 /* UIKittenPrototype.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -100,6 +131,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		352071D81CC9633F009BC420 /* UIKittenPrototype */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 352071E81CC9633F009BC420 /* Build configuration list for PBXNativeTarget "UIKittenPrototype" */;
+			buildPhases = (
+				352071D51CC9633F009BC420 /* Sources */,
+				352071D61CC9633F009BC420 /* Frameworks */,
+				352071D71CC9633F009BC420 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIKittenPrototype;
+			productName = UIKittenPrototype;
+			productReference = 352071D91CC9633F009BC420 /* UIKittenPrototype.app */;
+			productType = "com.apple.product-type.application";
+		};
 		35DD127C1CB9CA7000FD96C0 /* UIKitten */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 35DD12911CB9CA7000FD96C0 /* Build configuration list for PBXNativeTarget "UIKitten" */;
@@ -146,6 +194,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = cargath;
 				TargetAttributes = {
+					352071D81CC9633F009BC420 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 					35DD127C1CB9CA7000FD96C0 = {
 						CreatedOnToolsVersion = 7.3;
 					};
@@ -160,6 +211,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 35DD12731CB9CA7000FD96C0;
 			productRefGroup = 35DD127E1CB9CA7000FD96C0 /* Products */;
@@ -167,12 +219,22 @@
 			projectRoot = "";
 			targets = (
 				35DD127C1CB9CA7000FD96C0 /* UIKitten */,
+				352071D81CC9633F009BC420 /* UIKittenPrototype */,
 				35DD12861CB9CA7000FD96C0 /* UIKittenTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		352071D71CC9633F009BC420 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				352071E61CC9633F009BC420 /* LaunchScreen.storyboard in Resources */,
+				352071E31CC9633F009BC420 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35DD127B1CB9CA7000FD96C0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -190,6 +252,15 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		352071D51CC9633F009BC420 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				352071DE1CC9633F009BC420 /* ViewController.swift in Sources */,
+				352071DC1CC9633F009BC420 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		35DD12781CB9CA7000FD96C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -215,7 +286,42 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		352071E41CC9633F009BC420 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				352071E51CC9633F009BC420 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		352071E91CC9633F009BC420 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UIKittenPrototype/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.cargath.UIKittenPrototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		352071EA1CC9633F009BC420 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = UIKittenPrototype/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = de.cargath.UIKittenPrototype;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		35DD128F1CB9CA7000FD96C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -254,7 +360,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -297,7 +403,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -362,6 +468,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		352071E81CC9633F009BC420 /* Build configuration list for PBXNativeTarget "UIKittenPrototype" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				352071E91CC9633F009BC420 /* Debug */,
+				352071EA1CC9633F009BC420 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		35DD12771CB9CA7000FD96C0 /* Build configuration list for PBXProject "UIKitten" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -378,6 +492,7 @@
 				35DD12931CB9CA7000FD96C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		35DD12941CB9CA7000FD96C0 /* Build configuration list for PBXNativeTarget "UIKittenTests" */ = {
 			isa = XCConfigurationList;
@@ -386,6 +501,7 @@
 				35DD12961CB9CA7000FD96C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
