@@ -11,6 +11,11 @@
 		352071DE1CC9633F009BC420 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352071DD1CC9633F009BC420 /* ViewController.swift */; };
 		352071E31CC9633F009BC420 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 352071E21CC9633F009BC420 /* Assets.xcassets */; };
 		352071E61CC9633F009BC420 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 352071E41CC9633F009BC420 /* LaunchScreen.storyboard */; };
+		352071F31CCAD619009BC420 /* UIView+Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352071F21CCAD619009BC420 /* UIView+Animations.swift */; };
+		352071F51CCAD6E7009BC420 /* UIView+Subviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352071F41CCAD6E7009BC420 /* UIView+Subviews.swift */; };
+		352071F91CCAD723009BC420 /* UIView+Superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352071F81CCAD723009BC420 /* UIView+Superview.swift */; };
+		352071FB1CCAD78F009BC420 /* UIView+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352071FA1CCAD78F009BC420 /* UIView+ActivityIndicator.swift */; };
+		352071FC1CCAD8EE009BC420 /* UIKitten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DD127D1CB9CA7000FD96C0 /* UIKitten.framework */; };
 		35DD12811CB9CA7000FD96C0 /* UIKitten.h in Headers */ = {isa = PBXBuildFile; fileRef = 35DD12801CB9CA7000FD96C0 /* UIKitten.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35DD12881CB9CA7000FD96C0 /* UIKitten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DD127D1CB9CA7000FD96C0 /* UIKitten.framework */; };
 		35DD128D1CB9CA7000FD96C0 /* UIKittenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DD128C1CB9CA7000FD96C0 /* UIKittenTests.swift */; };
@@ -33,6 +38,10 @@
 		352071E21CC9633F009BC420 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		352071E51CC9633F009BC420 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		352071E71CC9633F009BC420 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		352071F21CCAD619009BC420 /* UIView+Animations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Animations.swift"; sourceTree = "<group>"; };
+		352071F41CCAD6E7009BC420 /* UIView+Subviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Subviews.swift"; sourceTree = "<group>"; };
+		352071F81CCAD723009BC420 /* UIView+Superview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Superview.swift"; sourceTree = "<group>"; };
+		352071FA1CCAD78F009BC420 /* UIView+ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator.swift"; sourceTree = "<group>"; };
 		35DD127D1CB9CA7000FD96C0 /* UIKitten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DD12801CB9CA7000FD96C0 /* UIKitten.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitten.h; sourceTree = "<group>"; };
 		35DD12821CB9CA7000FD96C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -46,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352071FC1CCAD8EE009BC420 /* UIKitten.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,6 +114,10 @@
 			children = (
 				35DD12801CB9CA7000FD96C0 /* UIKitten.h */,
 				35DD12821CB9CA7000FD96C0 /* Info.plist */,
+				352071FA1CCAD78F009BC420 /* UIView+ActivityIndicator.swift */,
+				352071F21CCAD619009BC420 /* UIView+Animations.swift */,
+				352071F41CCAD6E7009BC420 /* UIView+Subviews.swift */,
+				352071F81CCAD723009BC420 /* UIView+Superview.swift */,
 			);
 			path = UIKitten;
 			sourceTree = "<group>";
@@ -265,6 +279,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352071F31CCAD619009BC420 /* UIView+Animations.swift in Sources */,
+				352071F51CCAD6E7009BC420 /* UIView+Subviews.swift in Sources */,
+				352071F91CCAD723009BC420 /* UIView+Superview.swift in Sources */,
+				352071FB1CCAD78F009BC420 /* UIView+ActivityIndicator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +434,7 @@
 		35DD12921CB9CA7000FD96C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -426,12 +445,14 @@
 				PRODUCT_BUNDLE_IDENTIFIER = de.cargath.UIKitten;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		35DD12931CB9CA7000FD96C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
