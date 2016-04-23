@@ -46,4 +46,18 @@ public extension UIView {
         return false
     }
 
+    // MARK: - Enumerating subviews
+
+    public func enumerateSubviewsUsingBlock(block: UIView -> Void) {
+
+        for subview in subviews {
+
+            // Perform operation on subview
+            block(subview)
+
+            // Perform operation on all subviews of subview
+            subview.enumerateSubviewsUsingBlock(block)
+        }
+    }
+
 }
