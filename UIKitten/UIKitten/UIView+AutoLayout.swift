@@ -8,6 +8,28 @@
 
 import UIKit
 
+// MARK: - Activate / deactivate multiple constraints
+
+public extension Array where Element: NSLayoutConstraint {
+
+    @available(iOS 8.0, *)
+    public func activate() {
+        for constraint in self {
+            constraint.active = true
+        }
+    }
+
+    @available(iOS 8.0, *)
+    public func deactivate() {
+        for constraint in self {
+            constraint.active = false
+        }
+    }
+    
+}
+
+// MARK: - Generate multiple constraints
+
 public extension UIView {
 
     @available(iOS 9.0, *)
