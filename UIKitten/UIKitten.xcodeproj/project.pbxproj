@@ -16,6 +16,7 @@
 		352071F91CCAD723009BC420 /* UIView+Superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352071F81CCAD723009BC420 /* UIView+Superview.swift */; };
 		352071FB1CCAD78F009BC420 /* UIView+ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352071FA1CCAD78F009BC420 /* UIView+ActivityIndicator.swift */; };
 		352071FC1CCAD8EE009BC420 /* UIKitten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DD127D1CB9CA7000FD96C0 /* UIKitten.framework */; };
+		352072031CCBC671009BC420 /* UIView+AutoLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352072021CCBC671009BC420 /* UIView+AutoLayout.swift */; };
 		35DD12811CB9CA7000FD96C0 /* UIKitten.h in Headers */ = {isa = PBXBuildFile; fileRef = 35DD12801CB9CA7000FD96C0 /* UIKitten.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		35DD12881CB9CA7000FD96C0 /* UIKitten.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35DD127D1CB9CA7000FD96C0 /* UIKitten.framework */; };
 		35DD128D1CB9CA7000FD96C0 /* UIKittenTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35DD128C1CB9CA7000FD96C0 /* UIKittenTests.swift */; };
@@ -42,6 +43,7 @@
 		352071F41CCAD6E7009BC420 /* UIView+Subviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Subviews.swift"; sourceTree = "<group>"; };
 		352071F81CCAD723009BC420 /* UIView+Superview.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Superview.swift"; sourceTree = "<group>"; };
 		352071FA1CCAD78F009BC420 /* UIView+ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+ActivityIndicator.swift"; sourceTree = "<group>"; };
+		352072021CCBC671009BC420 /* UIView+AutoLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+AutoLayout.swift"; sourceTree = "<group>"; };
 		35DD127D1CB9CA7000FD96C0 /* UIKitten.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIKitten.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		35DD12801CB9CA7000FD96C0 /* UIKitten.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UIKitten.h; sourceTree = "<group>"; };
 		35DD12821CB9CA7000FD96C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				35DD12801CB9CA7000FD96C0 /* UIKitten.h */,
 				35DD12821CB9CA7000FD96C0 /* Info.plist */,
 				352071FA1CCAD78F009BC420 /* UIView+ActivityIndicator.swift */,
+				352072021CCBC671009BC420 /* UIView+AutoLayout.swift */,
 				352071F21CCAD619009BC420 /* UIView+Animations.swift */,
 				352071F41CCAD6E7009BC420 /* UIView+Subviews.swift */,
 				352071F81CCAD723009BC420 /* UIView+Superview.swift */,
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352072031CCBC671009BC420 /* UIView+AutoLayout.swift in Sources */,
 				352071F31CCAD619009BC420 /* UIView+Animations.swift in Sources */,
 				352071F51CCAD6E7009BC420 /* UIView+Subviews.swift in Sources */,
 				352071F91CCAD723009BC420 /* UIView+Superview.swift in Sources */,
