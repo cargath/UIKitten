@@ -9,9 +9,29 @@
 import UIKit
 import UIKitten
 
+public extension String {
+
+    public static var loremIpsum: String {
+        return "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+    }
+
+}
+
+public extension UILabel {
+
+    public convenience init(text: String, numberOfLines: Int = 0) {
+        self.init(frame: .zero)
+        self.text = text
+        self.numberOfLines = numberOfLines
+    }
+
+}
+
 class ViewController: UIViewController {
 
-    let label = UILabel()
+    let labelA = UILabel(text: "Lorem ipsum")
+    let labelB = UILabel(text: "Lorem ipsum")
+    let labelC = UILabel(text: "Lorem ipsum")
 
     var style: UIActivityIndicatorViewStyle = .WhiteLarge
 
@@ -26,16 +46,22 @@ class ViewController: UIViewController {
             UIBarButtonItem(barButtonSystemItem: .Play, target: self, action: #selector(ViewController.toggleActivityIndicator))
         ]
 
-        view.addSubview(label)
+        view.addSubview(labelA)
+        view.addSubview(labelB)
+        view.addSubview(labelC)
 
-        label.text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-        label.numberOfLines = 0
-    }
+        labelA.translatesAutoresizingMaskIntoConstraints = false
+        labelB.translatesAutoresizingMaskIntoConstraints = false
+        labelC.translatesAutoresizingMaskIntoConstraints = false
 
-    override func viewDidLayoutSubviews() {
-        label.frame = view.bounds
-        //
-        super.viewDidLayoutSubviews()
+        labelA.backgroundColor = .redColor()
+        labelB.backgroundColor = .greenColor()
+        labelC.backgroundColor = .blueColor()
+
+        labelA.constraintsAlignTopInside(view, padding: 8).activate()
+        labelB.constraintsAlignBelow(labelA, inside: view, horizontalPadding: 8, verticalPadding: 8).activate()
+        labelC.constraintsAlignBelow(labelB, inside: view, horizontalPadding: 8, verticalPadding: 8).activate()
+        //labelC.constraintsAlignBottomInside(view, below: labelB, horizontalPadding: 8, verticalPadding: 8).activate()
     }
 
     func toggleFullActivityIndicator() {
@@ -57,14 +83,17 @@ class ViewController: UIViewController {
         switch style {
             case .WhiteLarge, .White:
                 view.backgroundColor = .whiteColor()
-                label.textColor = .blackColor()
+                labelA.textColor = .blackColor()
+                labelB.textColor = .blackColor()
+                labelC.textColor = .blackColor()
             case .Gray:
                 view.backgroundColor = .blackColor()
-                label.textColor = .whiteColor()
+                labelA.textColor = .whiteColor()
+                labelB.textColor = .whiteColor()
+                labelC.textColor = .whiteColor()
         }
         
         return self
     }
 
 }
-
