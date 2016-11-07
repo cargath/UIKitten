@@ -13,9 +13,9 @@ public extension UIView {
     // MARK: - Removal from superviews
 
     public func dismiss() {
-        UIView.animateWithDuration(0.15, delay: 0, options: [], animations: {
+        UIView.animate(withDuration: 0.15, delay: 0, options: [], animations: {
             self.alpha = 0.1
-            self.transform = CGAffineTransformMakeScale(0.5, 0.5)
+            self.transform = CGAffineTransform(scaleX: 0.5, y: 0.5)
         }, completion: { finished in
             self.removeFromSuperview()
         })
@@ -40,7 +40,7 @@ public extension UIView {
         }
     }
 
-    public func removeFromSuperviewAnimated(animated: Bool) {
+    public func removeFromSuperviewAnimated(_ animated: Bool) {
 
         if animated {
             removeFromSuperviewAnimated()

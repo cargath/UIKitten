@@ -10,7 +10,7 @@ import UIKit
 
 public extension UIView {
 
-    public func addActivityIndicatorWithTag(tag: Int, indicatorStyle: UIActivityIndicatorViewStyle, blurEffectStyle: UIBlurEffectStyle, size: CGSize) -> UIView {
+    public func addActivityIndicatorWithTag(_ tag: Int, indicatorStyle: UIActivityIndicatorViewStyle, blurEffectStyle: UIBlurEffectStyle, size: CGSize) -> UIView {
 
         // Spinner
 
@@ -34,7 +34,7 @@ public extension UIView {
         // Finish
 
         spinner.addSubview(loadingOverlayView)
-        spinner.sendSubviewToBack(loadingOverlayView)
+        spinner.sendSubview(toBack: loadingOverlayView)
 
         addSubview(spinner, withTag: tag, animated: true)
         

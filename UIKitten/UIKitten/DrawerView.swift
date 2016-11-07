@@ -9,9 +9,9 @@
 import UIKit
 
 public protocol DrawerViewDataSource: class {
-    func widthForDrawerView(drawerView: DrawerView) -> CGFloat
+    func widthForDrawerView(_ drawerView: DrawerView) -> CGFloat
 }
 
-public class DrawerView: UIView {
-    public weak var dataSource: DrawerViewDataSource?
+open class DrawerView: UIView {
+    open weak var dataSource: DrawerViewDataSource?
 }

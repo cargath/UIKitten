@@ -11,7 +11,7 @@ import UIKit
 extension UINavigationController {
 
     // Convenience via builder pattern
-    private func withTabBarItem(tabBarItem: UITabBarItem) -> UINavigationController {
+    fileprivate func withTabBarItem(_ tabBarItem: UITabBarItem) -> UINavigationController {
         self.tabBarItem = tabBarItem
         return self
     }
@@ -23,25 +23,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
         // Override point for customization after application launch.
 
         UITabBarItem.appearance().setTitleTextAttributes([
-            NSFontAttributeName: UIFont.systemFontOfSize(16)
-        ], forState: .Normal)
+            NSFontAttributeName: UIFont.systemFont(ofSize: 16)
+        ], for: UIControlState())
 
         UITabBarItem.appearance().titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -14)
 
         let tabBarController = UITabBarController()
 
         tabBarController.viewControllers = [
-            UINavigationController(rootViewController: ViewController().withActivityIndicatorViewStyle(.WhiteLarge)).withTabBarItem(UITabBarItem(title: "WhiteLarge", image: nil, tag: 1)),
-            UINavigationController(rootViewController: ViewController().withActivityIndicatorViewStyle(.White)).withTabBarItem(UITabBarItem(title: "White", image: nil, tag: 2)),
-            UINavigationController(rootViewController: ViewController().withActivityIndicatorViewStyle(.Gray)).withTabBarItem(UITabBarItem(title: "Gray", image: nil, tag: 3))
+            UINavigationController(rootViewController: ViewController().withActivityIndicatorViewStyle(.whiteLarge)).withTabBarItem(UITabBarItem(title: "WhiteLarge", image: nil, tag: 1)),
+            UINavigationController(rootViewController: ViewController().withActivityIndicatorViewStyle(.white)).withTabBarItem(UITabBarItem(title: "White", image: nil, tag: 2)),
+            UINavigationController(rootViewController: ViewController().withActivityIndicatorViewStyle(.gray)).withTabBarItem(UITabBarItem(title: "Gray", image: nil, tag: 3))
         ]
 
-        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
 

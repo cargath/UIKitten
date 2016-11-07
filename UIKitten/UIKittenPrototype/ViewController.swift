@@ -33,7 +33,7 @@ class ViewController: UIViewController {
     let labelB = UILabel(text: "Lorem ipsum")
     let labelC = UILabel(text: "Lorem ipsum")
 
-    var style: UIActivityIndicatorViewStyle = .WhiteLarge
+    var style: UIActivityIndicatorViewStyle = .whiteLarge
 
     override func viewDidLoad() {
 
@@ -42,8 +42,8 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
 
         navigationItem.rightBarButtonItems = [
-            UIBarButtonItem(barButtonSystemItem: .FastForward, target: self, action: #selector(ViewController.toggleFullActivityIndicator)),
-            UIBarButtonItem(barButtonSystemItem: .Play, target: self, action: #selector(ViewController.toggleActivityIndicator))
+            UIBarButtonItem(barButtonSystemItem: .fastForward, target: self, action: #selector(ViewController.toggleFullActivityIndicator)),
+            UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(ViewController.toggleActivityIndicator))
         ]
 
         view.addSubview(labelA)
@@ -54,9 +54,9 @@ class ViewController: UIViewController {
         labelB.translatesAutoresizingMaskIntoConstraints = false
         labelC.translatesAutoresizingMaskIntoConstraints = false
 
-        labelA.backgroundColor = .redColor()
-        labelB.backgroundColor = .greenColor()
-        labelC.backgroundColor = .blueColor()
+        labelA.backgroundColor = .red
+        labelB.backgroundColor = .green
+        labelC.backgroundColor = .blue
 
         labelA.constraintsAlignTopInside(view, padding: 8).activate()
         labelB.constraintsAlignBelow(labelA, inside: view, horizontalPadding: 8, verticalPadding: 8).activate()
@@ -66,31 +66,31 @@ class ViewController: UIViewController {
 
     func toggleFullActivityIndicator() {
         if !view.removeViewWithTag(42, animated: true) {
-            view.addActivityIndicatorWithTag(42, indicatorStyle: style, blurEffectStyle: .Light, size: CGSize(width: 64, height: 64))
+            view.addActivityIndicatorWithTag(42, indicatorStyle: style, blurEffectStyle: .light, size: CGSize(width: 64, height: 64))
         }
     }
 
     func toggleActivityIndicator() {
         if !view.removeViewWithTag(42, animated: true) {
-            view.addActivityIndicatorWithTag(42, indicatorStyle: style, blurEffectStyle: .Light, size: view.bounds.size)
+            view.addActivityIndicatorWithTag(42, indicatorStyle: style, blurEffectStyle: .light, size: view.bounds.size)
         }
     }
 
-    func withActivityIndicatorViewStyle(style: UIActivityIndicatorViewStyle) -> ViewController {
+    func withActivityIndicatorViewStyle(_ style: UIActivityIndicatorViewStyle) -> ViewController {
 
         self.style = style
 
         switch style {
-            case .WhiteLarge, .White:
-                view.backgroundColor = .whiteColor()
-                labelA.textColor = .blackColor()
-                labelB.textColor = .blackColor()
-                labelC.textColor = .blackColor()
-            case .Gray:
-                view.backgroundColor = .blackColor()
-                labelA.textColor = .whiteColor()
-                labelB.textColor = .whiteColor()
-                labelC.textColor = .whiteColor()
+            case .whiteLarge, .white:
+                view.backgroundColor = .white
+                labelA.textColor = .black
+                labelB.textColor = .black
+                labelC.textColor = .black
+            case .gray:
+                view.backgroundColor = .black
+                labelA.textColor = .white
+                labelB.textColor = .white
+                labelC.textColor = .white
         }
         
         return self

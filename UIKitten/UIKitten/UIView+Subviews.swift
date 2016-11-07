@@ -12,18 +12,18 @@ public extension UIView {
 
     // MARK: - Adding subviews
 
-    public func addSubviewAnimated(subview: UIView) {
+    public func addSubviewAnimated(_ subview: UIView) {
 
         addSubview(subview)
 
         if bounds.size != subview.bounds.size {
-            subview.transform(from: CGAffineTransformMakeScale(0.6, 0.6), to: CGAffineTransformIdentity, withDuration: 0.5)
+            subview.transform(from: CGAffineTransform(scaleX: 0.6, y: 0.6), to: CGAffineTransform.identity, withDuration: 0.5)
         } else {
             subview.alpha(from: 0.0, to: 1.0, withDuration: 0.2)
         }
     }
 
-    public func addSubview(subview: UIView, withTag tag: Int, animated: Bool = false) {
+    public func addSubview(_ subview: UIView, withTag tag: Int, animated: Bool = false) {
 
         subview.tag = tag
 
@@ -36,7 +36,7 @@ public extension UIView {
 
     // MARK: - Removal of subviews
 
-    public func removeViewWithTag(tag: Int, animated: Bool = false) -> Bool {
+    public func removeViewWithTag(_ tag: Int, animated: Bool = false) -> Bool {
 
         if let subview = viewWithTag(tag) {
             subview.removeFromSuperviewAnimated(animated)
@@ -48,7 +48,7 @@ public extension UIView {
 
     // MARK: - Enumerating subviews
 
-    public func enumerateSubviewsUsingBlock(block: UIView -> Void) {
+    public func enumerateSubviewsUsingBlock(_ block: (UIView) -> Void) {
 
         for subview in subviews {
 
