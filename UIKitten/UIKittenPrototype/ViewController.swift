@@ -66,13 +66,13 @@ class ViewController: UIViewController {
 
     func toggleFullActivityIndicator() {
         if !view.removeViewWithTag(42, animated: true) {
-            view.addActivityIndicatorWithTag(42, indicatorStyle: style, blurEffectStyle: .light, size: CGSize(width: 64, height: 64))
+            _ = view.addActivityIndicatorWithTag(42, indicatorStyle: style, blurEffectStyle: .light, size: CGSize(width: 64, height: 64))
         }
     }
 
     func toggleActivityIndicator() {
         if !view.removeViewWithTag(42, animated: true) {
-            view.addActivityIndicatorWithTag(42, indicatorStyle: style, blurEffectStyle: .light, size: view.bounds.size)
+            _ = view.addActivityIndicatorWithTag(42, indicatorStyle: style, blurEffectStyle: .light, size: view.bounds.size)
         }
     }
 
